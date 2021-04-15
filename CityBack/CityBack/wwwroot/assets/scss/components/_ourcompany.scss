@@ -1,0 +1,41 @@
+#ourcompany{
+
+    .company-about{
+           .company-title{
+              h3{
+                color: $color-primary;
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 22px;
+                display: inline-block;
+                font-family:$sacremoto-font;
+              }
+            }
+            .company-text{
+               p{
+                    font-size: 36px;
+                    display: block;
+                    color: $color-black;
+                    font-weight: 400;
+                    font-family:$primary-font;
+               } 
+            }
+    }
+    .company-mission{
+        h5{
+            color: $color-black;
+            font-family:$primary-font;
+            font-weight: 600;
+        }
+        p{
+            font-family: "Sulphur Point",sans-serif;
+            color: $color-nav;
+            font-size: $text-font-size;
+            line-height: 30px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            
+        }
+       
+    }
+}

@@ -1,0 +1,122 @@
+#offering{
+  padding: 0px;
+  margin: 0px;
+
+  .single-img{
+    
+    .image{
+      width: 750px;
+        margin-left: -15px;
+        height: 950px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+  }  
+    
+  }
+  .travel{
+      background-color: #f1f2f6;
+      padding-left: 80px;
+      padding-top: 30px;
+      margin-top: 40px;
+      .travel-about{
+          position: relative;
+          span{
+             padding-top: 80px;
+             font-size: 30px;
+             font-weight: 700;
+             margin-bottom: 22px;
+             color: $color-primary;
+             display: inline-block;
+             font-family:$sacremoto-font;
+          }
+          h3{
+              color: $color-black;
+              margin-bottom: 39px;
+              font-weight:400;
+              font-family:$secondary-font;
+              letter-spacing: 1px;
+              font-size: 36px;
+              padding-right: 80px;
+          }
+          p{
+            margin-bottom: 56px;
+            line-height: 1.6;
+            color: $color-sub-title;
+            font-size: $text-font-size;
+          }
+
+      }
+      .travel-categories{
+          padding-bottom: 10px;
+          .travel-icon{
+              .fal{
+                color: $color-secondary;
+                font-size: 60px;
+                margin-right: 25px;
+              }
+              .fa-clipboard-list-check{
+                  font-size: 68px;
+              }
+          }
+          .travel-about{
+              h4{
+                color: $color-black;
+                font-size: 36px;
+                font-weight: 600;
+                margin-bottom: 11px;
+              }
+              p{
+               color: $color-sub-title;
+               font-size:$text-font-size ;
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width:990px){
+
+}
+@media screen and (max-width:720px){
+    
+}
+
+@media screen and (max-width:540px){
+  #offering{
+    .single-img{
+      .image{
+       display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:320px){
+  #offering{
+    .single-img{
+      .image{
+       display: none;
+      }
+    }
+    .travel{
+      padding-left: 0px;
+      text-align: center;
+      align-items: center;
+      .travel-about{
+        span{
+          font-size: 20px;
+          margin-left: 22px;
+          padding-top: 30px;
+        }
+        h3{
+          padding-right: 0px;
+        }
+        p{
+
+        }
+      }
+    }
+  }
+}

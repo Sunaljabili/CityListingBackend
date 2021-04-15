@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Explore>
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="row mt-5">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+             Explore Table 
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                Name
+                                </th>
+
+                                <th>
+                                Description
+                                </th>
+
+                                <th>
+                                Settings
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Explore explore in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.Raw(explore.ChooseCategory)  
+                                    </td>
+
+                                    <td>
+                                        @Html.Raw(explore.CategoryTitle)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Detail" asp-route-id="@explore.Id" class="btn btn-success"
+                                           
+                                           ><i class="far fa-info-square"style="font-size:30px" ></i></a>
+
+                                        <a asp-action="Update" asp-route-id="@explore.Id" class="btn btn-warning">
+                                            <i class="far fa-wrench" style="font-size:30px"></i>
+                                    
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@explore.Id" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"  style="font-size:30px"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                             
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+

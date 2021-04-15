@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP 4.5.3 Version CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+    <!-- SLICK PLUGIN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+
+    <!-- BASE  SASS  -->
+    <link rel="stylesheet"href="~/assets/scss/style.css">
+
+    <link rel="shortcut icon" type="image/x-icon"href="~/assets/img/testmonial/favicon.ico">
+
+    <title>City Listing</title>
+
+</head>
+
+<body>
+    <!-- Loading Animation Start -->
+    <div class="load1">
+        <div class="loading">
+            <span>Loading...</span>
+        </div>
+    </div>
+    <!-- Loading Animation End -->
+
+    <!-- Scroll Top Btn Start -->
+    <div class="to-top">
+        <i class="far fa-level-up-alt">
+        </i>
+    </div>
+    <!-- Scroll Top Btn End -->
+
+    <!-- HEADER ARE START -->
+    <header>
+        <!-- NAVBAR START -->
+     @await  Component.InvokeAsync("Header")
+        <!-- NAVBAR END -->
+    </header>
+    <!-- HEADER ARE START -->
+    @RenderBody()
+    <!-- FOOTER AREA START -->
+    <footer>
+        <!-- FOOTER AREA  START -->
+      @await  Component.InvokeAsync("Footer")
+        <!-- FOOTER AREA END -->
+
+    </footer>
+    <!-- FOOTER AREA START -->
+    <!-- PRO FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+    <!-- Jquery cdn and Bootstrap  Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"></script>
+
+
+    <!-- SLICK PLUGIN  JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- JS SCRIPT -->
+    <script src="~/assets/js/script.js"></script>
+
+    @RenderSection("Scripts",false)
+
+</body>
+
+</html>

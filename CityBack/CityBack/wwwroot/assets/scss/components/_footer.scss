@@ -1,0 +1,110 @@
+#footer-area{
+    background-image: url('../img/gallery/footer_bg.jpg');
+    .footer-content{
+        padding-top: 150px;
+        .footer-title{
+            h3{
+                color: $color-white;
+                font-family: $primary-font;
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 29px;
+                margin-left: 40px;
+                text-transform: capitalize;
+              }
+            .footer-links{
+                position: relative;
+                li{
+                    list-style-type: none;
+                    padding-top: 15px;
+                    a{
+                        text-decoration: none;
+                        color: $color-gray;
+                        text-transform: capitalize;
+                        transition: 1s;
+                        &:hover{
+                            margin-left: 10px;
+                            transition:all 1s;
+                            color: $color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+        .app-img{
+            .download-app1-images{
+                margin-left: 40px;
+                margin-bottom: 25px;
+                img{
+                    width: 150px;
+                }
+            }
+           
+        }
+        .footer-line{
+            position: relative;
+            margin-top: 25px;
+           .info-page{
+               p{
+                  color: $color-gray;
+                   .fas{
+                 color: $color-secondary;
+                   }
+                   span{
+                       color: $color-secondary;
+                   }
+               }
+           }
+           .icons-sosial{
+            position: absolute;
+            right: 50px;
+            top: -5px;
+               .border-icon{
+                   border: 1px solid $color-gray;
+                   height: 40px;
+                   width: 40px;
+                   border-radius: 50%;
+                   position: relative;
+                   margin-left: 10px;
+                   display: flex;
+                   &:hover{
+                       background-color: $color-secondary;
+                       transition: 1.5s;
+                       border-color: $color-white;
+                       .fab{
+                           color: $color-white;
+                          
+                       }
+                   }
+                   .fab{
+                    position: absolute;
+                    color: $color-gray;
+                    top: 10px;
+                    left: 11px;
+                    font-size: 22px;
+                   
+                   }
+                   }
+               }
+           }
+    }  
+
+}
+
+
+@media screen and (max-width:320px){
+    #footer-area{
+       
+    
+        .footer-content{
+            padding-top: 35px;
+            .app-img{
+                .download-app1-images{
+                img{
+                    width: 85px !important;
+                }
+                }
+            }
+        }
+    }
+}

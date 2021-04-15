@@ -1,0 +1,194 @@
+
+#intro{
+  background-image: url('../img/slider/slider-img.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:$opacity-color;
+  }
+  .slogan{
+      padding: 280px 0px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      h4{
+      color: $color-title;
+      font-size:$title-font-size+10;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      font-family: 'Sacremento',cursive;
+      display: block;
+      }
+      h1{
+       color: $color-white;
+       font-size: 78px;
+      }
+
+      .search-box{
+          margin: auto;
+          margin-top: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: 50px;
+          border: 8px solid rgba(255, 255, 255, 0.2);
+          height: 70px;
+          width: 650px;
+          position: relative;
+          // Col-4
+           .input-group{
+             width: 230px;
+            .form-control{
+                height: 55px;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+               }
+          }
+          // Col-4
+          .dropdown{
+            position: absolute;
+            left: 138px;
+            .btn-primary{
+              width: 250px;
+              height: 55px;
+              color: $color-black;
+              font-size: 16px;
+              background-color: $color-white;
+              border: 1px solid $color-white;
+              border-top-right-radius:0px ;
+              border-bottom-right-radius: 0px;
+            }
+          }
+          // Col-4
+          .btn-search{
+            position: absolute;
+            left: 282px;
+            .btn {
+               
+              height: 55px;
+              color: $color-white;
+              background-color: $color-primary;
+              border: 1px solid $color-primary;
+              width: 153px;
+              border-top-right-radius: 18px;
+              border-bottom-right-radius: 18px;
+            }
+          }
+         
+
+      
+      }
+     
+  }
+}
+.navbar-toggler-icon{
+  background-color: wheat;
+  .fas{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width:990px){
+ 
+}
+@media screen and (max-width:768px){
+  #intro{
+    width: 768px;
+    h1{
+      display: none;
+    }
+    .slogan{
+      .form-elements{
+        position: relative;
+     
+      .search-box{
+        border: none;
+        .input-group{
+          position: absolute;
+          left: 180px;
+          width: 250px;
+          input{
+             border: 0px ;
+             border-top-left-radius: 0px;
+             border-bottom-left-radius: 0px;
+          }
+        }
+        .dropdown{
+           position: absolute;
+           top: 60px;
+           left: 180px;
+       
+      }
+       .btn-search{
+        position: absolute;
+        top: 118px;
+         left: 180px;
+         .btn{
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            width: 250px;
+         }
+       }
+     
+
+      }
+    }
+  } 
+}
+
+@media screen and (max-width:540px){
+  #intro{
+    width: 520px;
+  }
+}
+@media screen and (max-width:375px){
+  #intro{
+    width: 320px;
+    h1{
+      display: none;
+    }
+    .slogan{
+      .form-elements{
+        position: relative;
+      .search-box{
+        border: none;
+        .input-group{
+          position: absolute;
+          left: 40px;
+          width: 250px;
+          input{
+             border: 0px ;
+             border-top-left-radius: 0px;
+             border-bottom-left-radius: 0px;
+          }
+        }
+        .dropdown{
+           position: absolute;
+           top: 60px;
+           left: 40px;
+        }
+        .btn-search{
+         position: absolute;
+         top: 118px;
+         left: 40px;
+          .btn{
+             border-top-right-radius: 0px;
+             border-bottom-right-radius: 0px;
+             width: 250px;
+          }
+        }
+      }
+     
+
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,57 @@
+﻿@model Bio
+
+<section id="header">
+    <nav class="navbar  navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/assets/img/logo/@Model.Logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="far fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:20%">
+                <ul class="navbar-nav ml-5" >
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="About" asp-action="Index">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Categories" asp-action="Index">Categories</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Blog" asp-action="Index">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
+                    </li>
+                  
+                    <li>
+                        <span class="navbar-text">
+                            <i class="fal fa-user-alt"></i>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+                                @User.Identity.Name
+
+                                <a asp-controller="Account" asp-action="Logout">Sign out</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="Login">Login</a>
+                                <span>or</span>
+                                <a asp-controller="Account" asp-action="Register">Register</a>
+                            }
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>

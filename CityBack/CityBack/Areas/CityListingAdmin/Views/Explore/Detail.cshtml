@@ -1,0 +1,15 @@
+﻿@model Explore
+@{
+    ViewData["Title"] = "Detail";
+}
+<div class="row">
+    <div class="col-12 mt-5">
+       
+        <h3>@Model.ChooseCategory</h3>
+        <div>@Html.Raw(Model.CategoryTitle)</div>
+    </div>
+    <div class="col-12 mt-2">
+        <a asp-controller="Explore" asp-action="Index" class="btn btn-danger">Go Back</a>
+    </div>
+</div>
+

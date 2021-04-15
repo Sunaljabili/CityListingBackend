@@ -1,0 +1,23 @@
+﻿@model PopularLocation
+@{
+    ViewData["Title"] = "Info";
+}
+
+<div class="row">
+    <div class="col-12 mt-5">
+
+        <h2>@Model.CityName</h2>
+
+        
+
+        <h3> <img src="~/assets/img/gallery/@Model.Image" style="width:200px;height:200px" alt="Alternate Text" /> </h3>
+
+
+        <h3>@Model.FeaturedCategory.CatgTitle</h3>
+
+    </div>
+    <div class="col-12 mt-2">
+        <a asp-controller="PopularCategory" asp-action="Index" class="btn btn-danger">Go Back</a>
+    </div>
+</div>
+

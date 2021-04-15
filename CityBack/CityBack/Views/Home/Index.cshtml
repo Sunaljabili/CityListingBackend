@@ -1,0 +1,303 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- MAIN AREA START -->
+<main>
+
+    <!-- INTRO SECTION START -->
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="slogan col-lg-11 col-11 col-sm-11 col-md-11" style="padding:250px 0px ";>
+                    <h4>@Model.Intro.HeadTitle</h4>
+                    <h1> @Model.Intro.Title</h1>
+                   
+                </div>
+            </div>
+            </div>
+    </section>
+    <!-- INTRO SECTION END -->
+
+
+    <!-- POPULAR LOCATIONS START -->
+    <section id="popular">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="title text-center">
+                        <span>Explore the city</span>
+                        <h1>Discover Great Places</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                @foreach (PopularLocation popular in Model.PopularLocations.Take(6))
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                        <div class="single-card">
+                            <div class="image-card">
+                                <img src="~/assets/img/gallery/@popular.Image" alt="">
+                            </div>
+                            <div class="location-country">
+                                <h1>@popular.CityName</h1>
+                                <div class="location-city-count">
+                                    <a href="#">@popular.CityCount <i class="fal fa-plus"></i> <span>Location</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="button">
+                    <a asp-action="LocationCategory"  class="btn btn-primary">
+                        VIEW ALL PLACES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- POPULAR LOCATIONS END -->
+
+    <!-- Easy to explore START -->
+    <section id="explore">
+        <div class="container">
+            <div class="d-flex row flex-wrap mt-5">
+                @await Component.InvokeAsync("Explore")
+                @*<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="title text-center mt-5">
+                        <span>@Model.Explore.HeadTitle</span>
+                        <h1>@Model.Explore.Title</h1>
+                    </div>
+                </div>*@
+            </div>
+            <div class="row">
+                @foreach (Explore explore in Model.Explores)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 justify-content-between mt-5">
+                        <div class="services text-center mb-50">
+                            <div class="spinner">
+                                <div class="circle">
+                                </div>
+                                <div class="services-icon mr-5">
+                                    <i class="@explore.Icon"></i>
+                                </div>
+                            </div>
+                            <div class="services-text text-center">
+                                <h5><a href="#">@explore.ChooseCategory</a></h5>
+                                <p>@Html.Raw(explore.CategoryTitle)</p>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                </div>
+        </div>
+    </section>
+    <!-- Easy to explore END -->
+
+    <!-- FEATURED CATEGORIES START -->
+    <section id="featured">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="title text-center">
+                        <span>@Model.FeaturedCategory.HeadTitle</span>
+                        <h1>@Model.FeaturedCategory.Title</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                @foreach (FeaturedCategory featuredcatg in Model.FeaturedCategories)
+                {
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="card section-card text-center">
+                            <div class="move-up">
+                            </div>
+                            <div class="card-icon mt-5">
+                                <i class="@featuredcatg.CatgIcon"></i>
+                            </div>
+                            <div class="card-title">
+                                <h5>
+                                    <a href="#">@featuredcatg.CatgTitle</a>
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <p>@featuredcatg.CatgDdescription</p>
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- FEATURED CATEGORIES END -->
+
+    <!-- We are offering for you START -->
+    <section id="offering">
+        <div class=" mt-5">
+            <div class="d-flex flex-wrap">
+                <div class="col-lg-4">
+                    <div class="single-img">
+                        <div class="image">
+                            <img src="~/assets/img/gallery/@Model.Offering.Image" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-5">
+                    <div class="travel">
+                        <div class="travel-about d-flex flex-wrap">
+                            <span>@Model.Offering.HeadTitle</span>
+
+                            <h3>@Model.Offering.Title</h3>
+
+                            <p>
+                                @Model.Offering.Description
+                            </p>
+                        </div>
+
+                        @foreach (Offering offering in Model.Offerings)
+                        {
+                            <div class="travel-categories d-flex">
+                                <div class="travel-icon">
+                                    <i class="@offering.Icon"></i>
+                                </div>
+                                <div class="travel-about">
+                                    <h4>@offering.OfferingTitle</h4>
+                                    <p>@offering.OfferingDescription</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- We are offering for you END -->
+
+    <!-- OUR CLIENT TESTIMONIALS START -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="title text-center">
+                        <span>@Model.ClientTestimonial.HeadTtitle</span>
+                        <h1>@Model.ClientTestimonial.Title</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 one-time">
+                    @foreach (var testimonial in Model.ClientTestimonials)
+                    {
+
+                        <div class="testimonial text-center mt-5">
+                            <div class="testimonial-review">
+                                <p>
+                                    @testimonial.Description
+                                </p>
+                            </div>
+                            <div class="testimonial-founder">
+                                <div class="founder-image mr-5">
+                                    <img src="~/assets/img/blog/@testimonial.WorkerImage" alt="">
+                                </div>
+                                <div class="founder-about">
+                                    <h5>@testimonial.WorkerName</h5>
+                                    <span>@testimonial.WorkerJob</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- OUR CLIENT TESTIMONIALS END -->
+
+    <!-- SUBSCRIBE  OUR NEWSLATTER START -->
+    @*<section id="subscribe">
+        <div class="container">
+            <div class="row mt-4 d-flex">
+                <div class="col-lg-12 col-md-12 ">
+                    <div class="title text-center">
+                        <span></span>
+                        <h1>Subscribe For Newsletter</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                    <div class="input">
+                        <div class="input-group inpt mb-3 w-50  input-group-lg">
+                            <input type="text" autocomplete="on" class="  form-control looking "
+                                   placeholder="What are you looking for">
+                            <div class="input-group-append send">
+                                <span class="input-group-text send-btn" id="basic-addon2">Send Now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+    <!-- SUBSCRIBE  OUR NEWSLATTER END -->
+
+    <!-- OUR BLOG SECTION START -->
+    <section id="ourblog">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-lg-12 col-12 col-md-12 col-sm-12">
+                    <div class="title text-center">
+                        <span>Our Blog</span>
+                        <h1>News and tips</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 col-12">
+                    <div class="card-blog ">
+                        <div class="card-image">
+                            <img src="~/assets/img/gallery/home_blog1.png" alt="">
+                        </div>
+                        <div class="card-title">
+                            <span>HEALTH & CARE </span>
+                            <h3> <a href="#">The Best SPA Salons For Your Relaxation</a></h3>
+                            <p> October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-12">
+                    <div class="card-blog">
+                        <div class="card-image">
+                            <img src="~/assets/img/gallery/home_blog2.png" alt="">
+                        </div>
+                        <div class="card-title">
+                            <span>HEALTH & CARE </span>
+                            <h3> <a href="#">The Best SPA Salons For Your Relaxation</a></h3>
+                            <p> October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card-blog">
+                        <div class="card-image">
+                            <img src="~/assets/img/gallery/home_blog3.png" alt="">
+                        </div>
+                        <div class="card-title">
+                            <span>HEALTH & CARE </span>
+                            <h3> <a href="#">The Best SPA Salons For Your Relaxation</a></h3>
+                            <p> October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- OUR BLOG SECTION END -->
+</main>
+<!-- MAIN AREA END -->

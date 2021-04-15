@@ -1,0 +1,233 @@
+﻿@model AboutVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- INTRO-PAGE AREA START -->
+<section id="intro-page">
+    <div class="container">
+        <div class="row ">
+            <div class="title-page text-center  ">
+                <h2>
+                    About
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INTRO-PAGE AREA START -->
+
+
+<!--  About our company START -->
+<section id="ourcompany">
+    <div class="container">
+        <div class="row d-flex flex-wrap mt-5">
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                <div class="company-about">
+                    <div class="company-title">
+                        <h3>@Model.AboutCompany.AboutTitle</h3>
+                    </div>
+                    <div class="company-text">
+                        <p>
+                         @Model.AboutCompany.AboutDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between  mt-5">
+            @foreach (AboutCompany aboutcompany in Model.AboutCompanies)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="company-mission">
+                        <h5>@aboutcompany.MissionTitle</h5>
+                        <p>
+                         @aboutcompany.MissionTitle
+                        </p>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!--  About our company END -->
+
+
+<!-- We are offering for you START -->
+<section id="offering">
+    <div class=" mt-5">
+        <div class="d-flex flex-wrap">
+            <div class="col-lg-4">
+                <div class="single-img">
+                    <div class="image">
+                        <img src="~/assets/img/gallery/section_bg03.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+                <div class="travel">
+                    <div class="travel-about d-flex flex-wrap">
+                        <span>We are offering for you</span>
+                        <h3>Every Month, Millions of People visit this site We’ve Built.</h3>
+                        <p>
+                            Unlike what its name implies, dry cleaning is not actually a 'dry' process. Clothes
+                            are soaked in a
+                            different solvent.
+                        </p>
+                    </div>
+                    <div class="travel-categories d-flex">
+                        <div class="travel-icon">
+                            <i class="fal fa-route"></i>
+                        </div>
+                        <div class="travel-about">
+                            <h4>Great places in the world</h4>
+                            <p>
+                                Unlike what its name implies, dry cleaning is not actu process. Clothes soaked
+                                differentent.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="travel-categories d-flex">
+                        <div class="travel-icon">
+                            <i class="fal fa-clipboard-list-check"></i>
+                        </div>
+                        <div class="travel-about">
+                            <h4>Biggest category listing</h4>
+                            <p>
+                                Unlike what its name implies, dry cleaning is not actu process. Clothes soaked
+                                differentent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- We are offering for you END -->
+
+<!-- OUR CLIENT TESTIMONIALS START -->
+<section id="testimonials">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="title text-center">
+                    <span>Our client testimonials</span>
+                    <h1>What our client say</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 one-time">
+                <div class="testimonial text-center mt-5">
+                    <div class="testimonial-review">
+                        <p>
+                            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Quis
+                            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus
+                            vel facilisis por
+                            incididunt ut labore et dolore mas.
+                        </p>
+                    </div>
+                    <div class="testimonial-founder">
+                        <div class="founder-image mr-5">
+                            <img src="~/assets/img/blog/founder.png" alt="">
+                        </div>
+                        <div class="founder-about">
+                            <h5>Oliva Jems</h5>
+                            <span>UIX Designer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial text-center mt-5">
+                    <div class="testimonial-review">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatem a, odio
+                            facilis
+                            nihil ut blanditiis tempore aperiam sint deleniti ab qui ducimus dignissimos
+                            voluptatum officia. Sint
+                            vero sit ullam!
+                        </p>
+                    </div>
+                    <div class="testimonial-founder">
+                        <div class="founder-image mr-5">
+                            <img src="~/assets/img/blog/founder.png" alt="">
+                        </div>
+                        <div class="founder-about">
+                            <h5>Sunal Jabiyev</h5>
+                            <span>Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- OUR CLIENT TESTIMONIALS END -->
+
+<!-- Easy to explore START -->
+<section id="explore">
+    <div class="container  ">
+        <div class="d-flex row flex-wrap mt-5">
+            <div class="col-lg-12">
+                <div class="title text-center mt-5">
+                    <span>Easy to explore</span>
+                    <h1>How It Works</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 justify-content-between mt-5">
+                <div class="services text-center mb-50">
+                    <div class="spinner">
+                        <div class="circle">
+                        </div>
+                        <div class="services-icon mr-5">
+                            <i class="far fa-user-chart "></i>
+                        </div>
+                    </div>
+                    <div class="services-text text-center">
+                        <h5><a href="#">1. Choose a Category</a></h5>
+                        <p>incidid labore lore magna aliqua <br> uisipsum suspendis loris.</p>
+                    </div>
+                    <!-- <img class="ml-5" src="~/assets/img/icon/serices1.png" alt=""> -->
+                </div>
+            </div>
+            <div class="col-lg-4 justify-content-between mt-5">
+                <div class="services text-center mb-50">
+                    <div class="spinner">
+                        <div class="circle">
+                        </div>
+                        <div class="services-icon mr-5">
+                            <i class="far fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="services-text text-center">
+                        <h5><a href="#">2. what you want</a></h5>
+                        <p>incidid labore lore magna aliqua <br> uisipsum suspendis loris.</p>
+                    </div>
+                    <!-- <img class="ml-5" src="~/assets/img/icon/serices2.png" alt=""> -->
+                </div>
+            </div>
+            <div class="col-lg-4 justify-content-between mt-5">
+                <div class="services text-center mb-50">
+                    <div class="spinner">
+                        <div class="circle">
+                        </div>
+                        <div class="services-icon mr-5">
+                            <i class="fas fa-handshake-alt"></i>
+                        </div>
+                    </div>
+                    <div class="services-text text-center">
+                        <h5><a href="#">3. Go out & Explore</a></h5>
+                        <p>incidid labore lore magna aliqua <br> uisipsum suspendis loris.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Easy to explore END -->

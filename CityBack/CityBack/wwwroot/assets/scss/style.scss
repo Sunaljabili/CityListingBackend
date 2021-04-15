@@ -1,0 +1,40 @@
+//Global SCSS
+@import "shared/mixings";
+@import "shared/variable";
+@import "shared/extend";
+
+//Components SCSS
+@import"components/header";
+@import"components/footer";
+@import"components/featured";
+@import"components/popular";
+@import"components/subscribe";
+@import"components/testimonials";
+@import "components/ourblog";
+@import"components/offerings";
+@import"components/explore";
+@import"components/intro-page";
+@import "components/map";
+@import "components/toTop";
+
+// Login
+@import "components/login";
+
+// Contact Page
+@import"components/touch";
+
+// About Page
+@import"components/ourcompany";
+
+// Listing Page
+@import "components/add-listing";
+@import"components/listing-details";
+@import "components/create-listings";
+
+// Blog Page
+@import "components/blog";
+@import "components/blog-details";
+
+
+//Pages SCSS
+@import "pages/index";

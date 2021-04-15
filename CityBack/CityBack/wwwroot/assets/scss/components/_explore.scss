@@ -1,0 +1,123 @@
+#explore{
+    background-image: url('../img/gallery/section_bg02.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    position: relative;
+ 
+   
+    .title{
+          padding-top: 100px;
+      span{
+          color: $color-title;
+          font-family: $sacremoto-font;
+          font-size: $sub-title-font-size;
+          font-weight: 700;
+          display: inline-block;
+          margin-bottom: 25px;
+
+      }
+      h1{
+          color: $color-white;
+          font-size: $title-font-size;
+      }  
+    }
+    
+    @keyframes spin {
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+    .services{
+      .spinner{
+        position: relative;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        .circle{
+          width: 95px;
+          height: 95px;
+          border-radius: 50%;
+          border: 2px dashed $color-title;
+          animation:spin 7s linear infinite;
+         
+        }
+        .services-icon{
+          position: absolute;
+          top: 2px;
+          left: 2px;
+           .far ,.fas{
+            margin-bottom: 50px;
+            width: 67px;
+            height: 67px;
+            background: $color-white;
+            color: $color-secondary;
+            font-size: 40px;
+            line-height: 67px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            position: relative;
+            margin: 5px;
+            top: 7px;
+            left: 8px;
+           }
+         }
+      }
+      .services-text{
+      margin-right: 50px;
+        h5{
+       
+          a{
+           text-decoration: none;
+           color: $color-white;
+           font-size:20px;
+           font-weight: 700;
+          }
+        }
+        p{
+          display: inline-block;
+          color:#bcbdca;
+          font-size: $text-font-size;
+          padding-bottom: 50px;
+        }
+       }
+       img{
+        position: absolute;
+        top: 25px;
+        left: 220px;
+      }
+      }
+
+     
+   }
+   
+
+   @media screen and (max-width:990px){
+
+  }
+  @media screen and (max-width:720px){
+      
+  }
+  
+  @media screen and (max-width:540px){
+      
+  }
+  
+  @media screen and (max-width:320px){
+    #explore{
+      width: 320px;
+      .services{
+     
+          .services-text{
+            margin-right: 0px;
+          }
+
+        }
+      }
+    }
+  
+  

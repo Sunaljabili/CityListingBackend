@@ -1,0 +1,141 @@
+﻿@model BlogVM
+@{
+    ViewData["Title"] = "BlogDetails";
+}
+
+
+<!-- INTRO-PAGE AREA START -->
+<section id="intro-page">
+    <div class="container">
+        <div class="row ">
+            <div class="title-page text-center  ">
+                <h2>
+                    Blog Details
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INTRO-PAGE AREA START -->
+
+
+<!-- BLOG DETAILS SECTION START -->
+<section id="blog-details">
+    <div class="container">
+        <div class="d-flex row flex-wrap mt-3">
+            <div class="col-lg-8">
+                <div class="blog-post mt-5">
+                    <div class="posting">
+                        <div class="blog-img">
+                            <img src="~/assets/img/blog/@Model.BlogPost.Image" alt="">
+                        </div>
+                        <div class="date-time">
+                            <span>@Model.BlogPost.DateTime</span>
+                        </div>
+                    </div>
+                    <div class="posting-title mt-5">
+                        <div class="blog-title">
+                            <a href="#">
+                                <h4>@Model.BlogPost.PostDescription </h4>
+                            </a>
+
+                        </div>
+                        <div class="blog-description">
+                            <p>
+                         @Model.BlogPost.BlogDetailLink
+                            </p>
+                        </div>
+                   
+
+                        <p class="txt">
+                             @Model.BlogPost.BlogNews
+                        </p>
+
+                        <div class="quote-wrapper">
+                            <div class="quote">
+                                <p>
+                                    @Model.BlogPost.BlogText
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="txt">
+                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
+                            should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                            fraction of the camp price. However, who has the willpower to actually sit through a
+                            self-imposed MCSE training. who has the willpower to actually
+                        </p>
+                    </div>
+               
+                </div>
+            </div>
+            <div class="col-lg-4">
+               
+                <div class="tap-cloud ml-5 mt-5">
+                    <h4>Tag Clouds</h4>
+                    <ul class="list">
+                        <li class="list-item">
+                            <a href="#">project</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">love</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">technolgy</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">travel</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">restaurant</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">life style</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">design</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">illustration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="instagram-feeds ml-5 mt-5">
+                    <h4>Instagram Feeds</h4>
+                    <div class="img">
+                        <ul class="flex-wrap">
+                            <li>
+                                <a href="">
+                                    <img src="~/assets/img/post/post_5.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""></a>
+                                <img src="~/assets/img/post/post_6.png" alt="">
+                            </li>
+                            <li>
+                                <a href=""></a>
+                                <img src="~/assets/img/post/post_7.png" alt="">
+                            </li>
+                            <li>
+                                <a href=""></a>
+
+                                <img src="~/assets/img/post/post_8.png" alt="">
+                            </li>
+                            <li>
+                                <a href=""></a>
+                                <img src="~/assets/img/post/post_9.png" alt="">
+                            </li>
+                            <li>
+                                <a href=""></a>
+                                <img src="~/assets/img/post/post_10.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BLOG DETAILS SECTION END -->

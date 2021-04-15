@@ -1,0 +1,102 @@
+#subscribe{
+    background-image: url('../img/gallery/section_bg04.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 530px;
+    z-index: -1;
+    margin-top: 50px;
+    .title{
+        padding-top: 100px;
+        margin: auto;
+        z-index: 999;
+        position: relative;
+        span{
+            color: $color-title;
+            font-size: $sub-title-font-size;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: $sacremoto-font;
+            display: inline-block;
+        }
+        h1{
+          color: $color-white;
+          font-size: $title-font-size;
+          margin-top: 20px;
+        }
+    }
+    .input{
+        padding-top:40px ;
+        .input-group{
+            margin: auto; 
+          
+            .looking{
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                padding: 30px;
+                height: 70px;
+            }
+        }
+        .send{
+            height: 70px;
+            .send-btn{
+                background-color: $color-primary;
+                color: #fff;
+                border-color:$color-primary;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    #subscribe{
+        .title{
+            span{
+                font-size: 22px;
+            }
+            h1{
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+        .input{
+            .input-group{
+                position: relative;
+                .looking{
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    position: absolute;
+                    top: -11px;
+                    right: -50px;
+                    height: 20px ;
+                    width: 260px ;
+                    padding: 15px;
+                }
+            }
+            .send{
+                position: relative;
+                .send-btn{
+                 position: absolute;
+                 border-top-left-radius: 30px;
+                 border-bottom-left-radius: 30px;
+                 top: 30px;
+                 left: 20px;
+                 padding: 5px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:540px){
+    
+}
+@media screen and (max-width:720px){
+    
+}
+
+@media screen and (max-width:990px){
+
+}

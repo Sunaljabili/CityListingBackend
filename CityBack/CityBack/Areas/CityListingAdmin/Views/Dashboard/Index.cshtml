@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MessageFromUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table text-center mt-3">
+    <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MessageFromUser message in Model)
+        {
+            <tr>
+                <td>@message.Id</td>
+                <td>@message.Email</td>
+                <td>
+                    <a class="btn btn-info" asp-area="CityListingAdmin" asp-controller="Dashboard" asp-action="Info" asp-route-id="@message.Id"><i class="fas fa-info-circle"></i></a>
+               
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

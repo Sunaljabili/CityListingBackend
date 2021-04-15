@@ -1,0 +1,17 @@
+.to-top{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 50px;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108,98,98,0.2);
+    z-index: 999;
+    line-height: 45px;
+    display: none;
+    cursor: pointer;
+}
