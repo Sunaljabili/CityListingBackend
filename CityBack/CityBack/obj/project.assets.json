@@ -8543,11 +8543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Backend Lessons\\Projects\\CityBack\\CityBack\\CityBack\\CityBack.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Lessons\\Projects\\CityListingBackend\\CityBack\\CityBack\\CityBack.csproj",
       "projectName": "CityBack",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Backend Lessons\\Projects\\CityBack\\CityBack\\CityBack\\CityBack.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Lessons\\Projects\\CityListingBackend\\CityBack\\CityBack\\CityBack.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Backend Lessons\\Projects\\CityBack\\CityBack\\CityBack\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Lessons\\Projects\\CityListingBackend\\CityBack\\CityBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8618,7 +8618,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.113\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.114\\RuntimeIdentifierGraph.json"
       }
     }
   }
