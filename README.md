@@ -1,6 +1,6 @@
 # CityListingBackend
 
-Yazmish oldugum,CityListing Front layihesini Backeninde de tamamladim, Asp.net Core 3.1
+Yazmish oldugum,CityListing Front layihesini Backeninde de tamamladim, Asp.net Core 3.1 MVC
 
 Funskionalliqlar
 
